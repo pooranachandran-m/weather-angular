@@ -1,0 +1,27 @@
+<div style="padding: 5% 10%">
+    <div style="text-align: center;">
+        <mat-form-field style="width:50%">
+            <mat-label>Select City</mat-label>
+            <mat-select [(value)]="selected" name="location" (selectionChange)="onMatSelectChange($event)">
+                @for (location of locations; track location) {
+                <mat-option [value]="location">{{location}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div id="wrap" class="side-by-side">
+        <div id="left" style="width:50%">
+            <app-location-table [weather]="weather" style="float: left; text-align: left"></app-location-table>
+        </div>
+        <div style="text-align: center;">
+            <img [ngSrc]="imageUrl" alt="Condition" width="75" height="75">
+        </div>
+        <div id="right" style="width:50%">
+            <app-temperature-table [weather]="weather" style="float: right"></app-temperature-table>
+        </div>
+    </div>
+    <div id="footer">
+        <app-air-quality-table style="text-align: center;" [weather]="weather"></app-air-quality-table>
+    </div>
+</div>

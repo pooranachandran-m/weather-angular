@@ -1,0 +1,14 @@
+<table class="mat-table" style="min-width:300px">
+    <tr class="mat-row">
+        <th class="mat-cell">Local Time</th>
+        <td class="mat-cell">{{weather?.location!.localtime!}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">Temp</th>
+        <td class="mat-cell">{{weather?.current!.temp_c}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">Humidity</th>
+        <td class="mat-cell">{{weather?.current!.humidity}}</td>
+    </tr>
+</table>

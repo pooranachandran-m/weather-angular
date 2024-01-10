@@ -1,0 +1,30 @@
+div{
+  padding: 1px 1px 1px 1px;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.side-by-side {
+  display: flex;
+}
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  width: 100%;
+}
+
+#left, #right {
+  padding: 0% 2%;
+}
+
+#footer{
+  padding: 1% 7%;
+}
